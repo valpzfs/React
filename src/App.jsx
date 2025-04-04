@@ -5,7 +5,7 @@ import './App.css'
 import Boton from './components/Boton';
 
 function App() {
-  const {count, setCount} = useState(99);
+  const [count, setCount] = useState(99);
   const msg = () => alert["Hola le diste click"];
   /*let count = 0;
   const setCount = ()=> {
@@ -27,8 +27,8 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <Boton texto = {"suma"} />
-        <Boton texto = {"resta"}/>
+        <Boton texto = {"suma"} onClick={() => setCount((count) => count + 1)}/>
+        <Boton texto = {"resta"} onClick={() => setCount((count) => count - 1)}/>
         <Boton texto = {"mensaje"} onclick ={msg}/>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
